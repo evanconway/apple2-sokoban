@@ -20,8 +20,9 @@
 0130 IF KY$ = "S" THEN PM(1) = 1
 0140 IF KY$ = "A" THEN PM(2) = -1
 0150 IF KY$ = "D" THEN PM(2) = 1
-0160 IF WA(PP(1) + PM(1), PP(2) + PM(2)) = 2 THEN PM(1) = 0 : PM(2) = 0
-
+0155 MT = WA(PP(1) + PM(1), PP(2) + PM(2)) : REM MOVING TO
+0160 IF MT = 2 THEN PM(1) = 0 : PM(2) = 0
+0170 IF MT = 4 AND WA(PP(1) + PM(1) * 2, PP(2) + PM(2) * 2) = 0 THEN WA(PP(1) + PM(1), PP(2) + PM(2)) = 0 : WA(PP(1) + PM(1) * 2, PP(2) + PM(2) * 2) = 4
 988 PP(1) = PP(1) + PM(1) : PP(2) = PP(2) + PM(2)
 989 PM(1) = 0: PM(2) = 0
 990 PRINT PP(1) ;
