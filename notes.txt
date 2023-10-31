@@ -1,0 +1,20 @@
+To represent cell state we will use a number represented in binary. Each bit represents what is or isn't located at that cell:
+
+BIT		VALUE
+0		PLAYER
+1		WALL
+2		BOX
+3		GOAL
+
+With this we can represent the exact state of a cell as an integer:
+
+BINARY	DECIMAL		VALUE
+0000	0			FLOOR (NOTHING THERE)
+0001	1			PLAYER
+0010	2			WALL
+0100	4			BOX
+1000	8			GOAL
+1001	9			PLAYER AND GOAL
+1100	12			BOX AND GOAL
+
+In this sokoban game a cell can only be on of these 7 states. 
